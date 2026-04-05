@@ -5,7 +5,7 @@
 * Java 21
 * Maven
 
-From the project root (`cinema-tickets-java`), I run:
+From the project root (`cinema-tickets-java`), and run:
 
 ```bash
 mvn test
