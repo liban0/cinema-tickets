@@ -6,10 +6,13 @@ package uk.gov.dwp.uc.pairtest.domain;
 
 public class TicketTypeRequest {
 
-    private int noOfTickets;
-    private Type type;
+    private final int noOfTickets;
+    private final Type type;
 
     public TicketTypeRequest(Type type, int noOfTickets) {
+        if (type == null) {
+            throw new IllegalArgumentException("Ticket type cannot be null");
+        }
         this.type = type;
         this.noOfTickets = noOfTickets;
     }
@@ -23,7 +26,7 @@ public class TicketTypeRequest {
     }
 
     public enum Type {
-        ADULT, CHILD , INFANT
+        ADULT, CHILD, INFANT
     }
 
 }
